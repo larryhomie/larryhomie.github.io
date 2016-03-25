@@ -210,10 +210,6 @@ h1 {
 	left: 50%;
 	margin-top: -20px;
 	background: url(../img/sprite.png) no-repeat; 
-	-webkit-transition: all 0s ease 0.5s;
-	-moz-transition: all 0s ease 0.5s;
-	-o-transition: all 0s ease 0.5s;
-	transition: all 0s ease 0.5s;
 }
 
 .work a.column:before {
@@ -281,6 +277,13 @@ p.footer {
 	opacity: 0.6;
 	font-weight: 400;
 	margin-top: 20px;
+}
+
+.my_contact a {
+	display: inline-block;
+	margin-top: 30px;
+	font-size: 80%;
+	font-weight: 400;
 }
 
 legend {
