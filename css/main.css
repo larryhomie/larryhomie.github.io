@@ -191,45 +191,88 @@ h1 {
 	border-top: 1px solid #e8e8e8;
 }
 
-.work div.column {
+.work a.column {
 	height: 300px;
 	background: #fafafa;
+	color: #fafafa;
 	margin-bottom: 30px;
 	position: relative;
 	overflow: hidden;
+	display: block;
 }
 
-.work div.column:after {
+.work a.column:after {
 	content: '';
-
 	height: 40px;
-	
 	display: block;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	margin-top: -20px;
-	
+	background: url(../img/sprite.png) no-repeat; 
+	-webkit-transition: all 0s ease 0.5s;
+	-moz-transition: all 0s ease 0.5s;
+	-o-transition: all 0s ease 0.5s;
+	transition: all 0s ease 0.5s;
 }
 
-.work div.column.casting:after {
-	background-position: -2px -8px;
+.work a.column:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	border: 1px solid;
+	-webkit-transition: all 0.5s ease 0.5s;
+	-moz-transition: all 0.5s ease 0.5s;
+	-o-transition: all 0.5s ease 0.5s;
+	transition: all 0.5s ease 0.5s;
+}
+
+.work a.column.casting:hover:before {
+	color: #EF073F;
+}
+
+.work a.column.rpoints:hover:before {
+	color: #22A022;
+}
+
+.work a.column.hymnit:hover:before {
+	color: #540060;
+}
+
+.work a.column.casting:after {
+	background-position: -2px -7px;
 	width: 164px;
 	margin-left: -82px;
 }
 
-.work div.column.rpoints:after {
-	background-position: -202px -8px;
+.work a.column.casting:hover:after {
+	background-position: -2px -61px;
+}
+
+.work a.column.rpoints:after {
+	background-position: -201px -6px;
     width: 166px;
     margin-left: -83px;
 }
 
-.work div.column.hymnit:after {
-	background-position: -400px -8px;
+.work a.column.rpoints:hover:after {
+	background-position: -201px -60px;
+}
+
+.work a.column.hymnit:after {
+	background-position: -400px -6px;
 	width: 82px;
-    height: 80px;
+    height: 82px;
     margin-left: -41px;
-    margin-top: -40px;
+    margin-top: -41px;
+}
+
+.work a.column.hymnit:hover:after {
+	background-position: -400px -96px;
 }
 
 p.footer {
@@ -249,40 +292,6 @@ legend {
 	text-shadow: 0 1px rgba(255,255,255,0.25);
 	padding: 10px 20px;
 	margin-bottom: 20px;
-}
-
-a.inner_detail {
-	padding: 30px;
-	color: #fff;
-	background: rgba(0,0,0,0.6);
-	font-size: 16px;
-	font-weight: 400;
-	position: absolute;
-	bottom: -100%;
-	left: 0;
-	right: 0;
-	display: none;
-}
-
-.inner_detail p {
-	margin-bottom: 8px;
-}
-
-.work div.column:hover > .inner_detail {
-	top: 0;
-	bottom: 0;
-}
-
-.casting .inner_detail {
-	background: rgba(237,7,53,0.8);
-}
-
-.rpoints .inner_detail {
-	background: rgba(34,160,34,0.8);
-}
-
-.hymnit .inner_detail {
-	background: rgba(84,0,96,0.8);
 }
 
 @media only screen and (max-width: 768px) {
@@ -330,9 +339,9 @@ a.inner_detail {
   (min-device-pixel-ratio: 2) {
 
   	
-	.work div.column:after  {
+	.work a.column:after  {
   		background-image: url(../img/sprite@2x.png); 
-  		background-size: 500px 300px;
+  		background-size: 500px 200px;
   	}
 
 }
